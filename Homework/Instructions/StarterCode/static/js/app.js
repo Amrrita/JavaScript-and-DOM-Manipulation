@@ -20,7 +20,7 @@ function buildTable(data){
     });
 }
 
-// Event that calls a function  name it handleClick
+// a function handleClick
 function handleClick(){
     d3.event.preventDefault() // prevent the form from refreshing the page
     

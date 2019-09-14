@@ -8,9 +8,10 @@ var tbody = d3.select("tbody");
 function buildTable(data){
     // First, clear out existing data
     tbody.html("");
-    data.forEach(dataRow => {
+    //to loop through each entry
+    data.forEach(dataRow => { 
         console.table(dataRow);
-        let row = tbody.append("tr");
+        var row = tbody.append("tr");
 
        console.table(Object.values(dataRow));
        Object.values(dataRow).forEach((val) => {
@@ -21,11 +22,11 @@ function buildTable(data){
 }
 
 // a function handleClick
-function handleClick(){
+function Click(){
     d3.event.preventDefault() // prevent the form from refreshing the page
     
     let date = d3.select("#datetime").property("value");
-    let filterData= tableData;
+    let filterData= tabledata;
 
     // Check to see if a date was entered and filter the data using that date
     if (date){
@@ -40,5 +41,5 @@ function handleClick(){
 
 
 
-d3.selectAll("#filter-btn").on("click", handleClick);
-buildTable(tableData);
+d3.selectAll("#filter-btn").on("click", Click);
+buildTable(tabledata);
